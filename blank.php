@@ -108,10 +108,10 @@ $DBcon->close();
                         </ul>
                     </li>
                      <li>
-                        <a href="#"><i class="fa fa-yelp "></i>Extra Pages <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-yelp "></i>Staff<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="invoice.html"><i class="fa fa-coffee"></i>Invoice</a>
+                                <a href="add1.php"><i class="fa fa-coffee"></i>Add Staff Members</a>
                             </li>
                             <li>
                                 <a href="pricing.html"><i class="fa fa-flash "></i>Pricing</a>
@@ -403,7 +403,7 @@ Insight Institute of Management and Technology is a “not for profit” organiz
                    
                 
    
-   
+
 
 
 </body>
