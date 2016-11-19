@@ -15,19 +15,18 @@ $DBcon->close();
 
 
 
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Bootstrap Advance Admin Template</title>
+    <title>Main page</title>
 
     <!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!--CUSTOM BASIC STYLES-->
+       <!--CUSTOM BASIC STYLES-->
     <link href="assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
@@ -62,7 +61,7 @@ $DBcon->close();
                 <ul class="nav" id="main-menu">
                     <li>
                         <div class="user-img-div">
-                            <img src="assets/img/user.png" class="img-thumbnail" />
+                            <img src="assets/img/profile.jpg" class="img-thumbnail" />
 
                             <div class="inner-text">
                                 <?php echo "Login as ".$userRow['username']; ?>
@@ -74,8 +73,8 @@ $DBcon->close();
                     </li>
 
 
-                    <li>
-                        <a  href="index.html"><i class="fa fa-dashboard "></i>Dashboard</a>
+                   <li>
+                        <a class="" href="blank.php"><i class="fa fa-dashboard "></i>About</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-desktop "></i>UI Elements <span class="fa arrow"></span></a>
@@ -135,7 +134,7 @@ $DBcon->close();
                         <a href="table.html"><i class="fa fa-flash "></i>Data Tables </a>
                         
                     </li>
-                    <li>
+                     <li>
                         <a href="#"><i class="fa fa-bicycle "></i>Forms <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                            
@@ -149,7 +148,7 @@ $DBcon->close();
                            
                         </ul>
                     </li>
-                     <li>
+                      <li>
                         <a href="gallery.html"><i class="fa fa-anchor "></i>Gallery</a>
                     </li>
                      <li>
@@ -184,9 +183,10 @@ $DBcon->close();
                     </li>
                    
                     <li>
-                        <a class="active-menu" href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>
+                        <a href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>
                     </li>
                 </ul>
+
             </div>
 
         </nav>
@@ -195,41 +195,215 @@ $DBcon->close();
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="page-head-line">BLANK PAGE</h1>
-                        <h1 class="page-subhead-line">This is dummy text , you can replace it with your original text. </h1>
+                        <h1 class="page-head-line">Institue of Management & Technology</h1>
+                       
 
                     </div>
                 </div>
                 <!-- /. ROW  -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-info">
-                            This is a free responsive admin under cc3.0 license, so you can use it for personal and commercial use.
-                          <br />
-                            Enjoy this admin and for more please keep looking <a href="http://www.binarytheme.com/" target="_blank">BinaryTheme.com</a>
+                    <div class="col-md-4">
+                        <div class="main-box mb-red">
+                            <a href="#">
+                                <h5>Mission</h5>
+                                <h6>Empowerment by Education</h6>
+                            </a>
                         </div>
                     </div>
-                </div>
+                    <div class="col-md-4">
+                        <div class="main-box mb-dull">
+                            <a href="#">
+                               <h5>Products</h5>
+                                <h6>Certificate,Diploma an External Degree programmes</h6> 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="main-box mb-pink">
+                            <a href="#">
+                                <h5>Story</h5>
+                                <h6>Knowledge will be the most important commodity of the 21st century. Insight endeavours to give an opportunity to everyone o acquire knowledge and use it to the betterrment of oneself and of the whole world</h6> 
+                            </a>
+                        </div>
+                    </div>
 
-            </div>
-            <!-- /. PAGE INNER  -->
-        </div>
-        <!-- /. PAGE WRAPPER  -->
-    </div>
-    <!-- /. WRAPPER  -->
-    <div id="footer-sec">
-        &copy; 2014 YourCompany | Design By : <a href="http://www.binarytheme.com/" target="_blank">BinaryTheme.com</a>
-    </div>
-    <!-- /. FOOTER  -->
-    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.js"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
-    <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+                </div>
+                <!-- /. ROW  -->
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div id="reviews" class="carousel slide" data-ride="carousel">
+
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+
+                                            <div class="col-md-10 col-md-offset-1">
+
+                                                <h4><i class="fa fa-quote-left"></i>“All humans are dead except those who have knowledge;and all those who have knowledge are asleep, except those who do good deeds;and those who do good deeds are deceived,and those who are sincere are always in a state of worry.”<i class="fa fa-quote-right"></i></h4>
+                                                <div class="user-img pull-right">
+                                                    <img src="" alt="" class="img-u image-responsive" />
+                                                </div>
+                                                <h5 class="pull-right"><strong class="c-black">Imam Shafi’i </strong></h5>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="col-md-10 col-md-offset-1">
+
+                                                <h4><i class="fa fa-quote-left"></i>Seek (beneficial) knowledge,because seeking it for the sake of Allaah is a worship. And knowing it makes you more God-fearing; and searching for it is jihad,teaching it to those who do not know is charity,reviewing and learning it more is like tasbeeh<i class="fa fa-quote-right"></i></h4>
+                                                <div class="user-img pull-right">
+                                                    <img src="" alt="" class="img-u image-responsive" />
+                                                </div>
+                                                <h5 class="pull-right"><strong class="c-black">Imam Ibn Hazm Rahimahullah</strong></h5>
+                                            </div>
+
+                                        </div>
+                                        <div class="item">
+                                            <div class="col-md-10 col-md-offset-1">
+
+                                                <h4><i class="fa fa-quote-left"></i>“True knowledge is not measured in relationship to how much you memorize and then narrate, but rather,true knowledge is an expression of piety [protecting oneself from what Allaah prohibited and acting upon what He mandated”<i class="fa fa-quote-right"></i></h4>
+                                                <div class="user-img pull-right">
+                                                    <img src="" alt="" class="img-u image-responsive" />
+                                                </div>
+                                                <h5 class="pull-right"><strong class="c-black">Shaykh Sa’di</strong></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--INDICATORS-->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#reviews" data-slide-to="0" class="active"></li>
+                                        <li data-target="#reviews" data-slide-to="1"></li>
+                                        <li data-target="#reviews" data-slide-to="2"></li>
+                                    </ol>
+                                    <!--PREVIUS-NEXT BUTTONS-->
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- /. ROW  -->
+                        <hr />
+
+                        <div class="panel panel-default">
+
+                            <div id="carousel-example" class="carousel slide" data-ride="carousel" style="border: 5px solid #000;">
+
+                                <div class="carousel-inner">
+                                    <div class="item active">
+
+                                        <img src="assets/img/slideshow/2.jpg" alt="" />
+
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/img/slideshow/2.jpg" alt="" />
+
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/img/slideshow/2.jpg" alt="" />
+
+                                    </div>
+                                </div>
+                                <!--INDICATORS-->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example" data-slide-to="2"></li>
+                                </ol>
+                                <!--PREVIUS-NEXT BUTTONS-->
+                                <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.REVIEWS &  SLIDESHOW  -->
+                    <div class="col-md-4">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                
+                            </div>
+                            <div class="panel-body" style="padding: 0px;">
+                                <div class="chat-widget-main">
+                                        <h3>Company Details</h3>
+
+                                    <div class="chat-widget-left">
+                                        
+                                    No: 18 A Palmyrah Avenue Colombo. 03, Colombo, Sri Lanka
+                                        
+                                    </div>
+                                    <div class="chat-widget-name-left">
+                                        <a href="">www.insight.lk</a>
+                                    </div>
+                                    <div class="chat-widget-right">
+                                        Contact:
+                                        011-2965789
+                                        077-2992225
+                                    </div>
+                                    <div class="chat-widget-right">
+                                        <img src="img/ad.jpg" alt="" />
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter Message" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-success" type="button">SEND</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--/.Chat Panel End-->
+                </div>
+                <!-- /. ROW  -->
+
+
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                <h4 class="list-group-item-heading">INSIGHT INSTITUTE OF MANAGEMENT AND TECHNOLOGY HELPS TO UPLIFT THE RURAL ECONOMY</h4>
+                                <p class="list-group-item-text" style="line-height: 30px;">
+                                    Insight Institute of Management and Technology, situated at Palmyrah Avenue Colombo 3 conducted its 07th Three day Residential Business Development Program for small and medium enterprises, from the on 25th November up to 27th 2011 . at the ADRT, Jamiah Naleemiah, Beruwela.
+
+Thirty Eight businessmen took part in this program to fine tune and professionalize many of their business skills, including Finance, HR, Marketing as well as Islamic business ethics, planning etc.
+
+Mr. Hilmi Sulaiman, CEO of Insight Institute of Management and Technology stated, that these programmes are conducted regularly in Tamil, using experts in each field, to fill a vacuum in the training and development of the Tamil speaking business community and to uplift the rural economy, through local entrepreneurs.
+
+In the second round, one day specialized programmes are conducted to give further insights and expertise in different fields.
+
+One of the key features of these programmes is the opportunity given by Insight Institute to meet with and share experiences of successful entrepreneurs who have come to the top from small beginnings. Several top businessmen in the country have taken part in this programmes voluntarily and they have been able to boost the morale and resolve of the participants to overcome obstacles and succeed.
+
+Another component is a module on Tax awareness and the usefulness of paying income tax which helps the government to continue to provide many free services like Health,Education etc.
+
+Insight also gives low cost business counseling to SMEs with a view to support professionalism in the sector.
+
+Insight Institute of Management and Technology is a “not for profit” organization managed by the Insight Education Trust
+                                </p>
+                            </a>
+                        </div>
+                        <br />
+                        <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.facebook.com/Insight-Institute-of-Management-Technology-210962315599689/"></iframe>
+                        </div>
+                    </div>
+                   
+                
+   
+   
 
 
 </body>
