@@ -40,7 +40,7 @@ tr{
 
 }
 input[type=text],input[type=date]{
-    background-color:   rgb(250,230,246);
+    background-color:  rgb(240,248,255);
 }
 </style>
 </head>
@@ -190,7 +190,7 @@ input[type=text],input[type=date]{
 
             </div>
  </nav>
-             <div id="page-wrapper" style="background-color: #4B0082;">
+             <div id="page-wrapper" style="background-color: black;">
             <div id="page-inner" style="background-color: #4B0082;" >
              <div class="contain-fluid" style="font-family:arial; border: 1px solid DarkGray; border-radius:5px; margin-left:5%; margin-top:10px; width:90%; align:center; padding:10px; background-color:white; height:60px;">
 		<h1 style="margin-top:-5px" align="center">Update Employee Details</h1>
@@ -231,8 +231,8 @@ $row = $result->fetch_assoc();
 <tr><td>Joined Date</td><td><input class="form-control"  type="date"  name="date" value=<?php echo $row['joined_date'];?>></td></tr>
 <tr><td>Salary</td><td><input  class="form-control" type="text"  name="salary" value=<?php echo $row['salary'];?>></td></tr>
 </table>
-<input  class="btn btn-default btn-lg"  type="submit" value="Update" name="update" style="width:200px; background-color:#4B0082; color:white; margin-left:42% ">
-<input  class="btn btn-default btn-lg"  type="submit" value="Delete" name="delete" style="width:200px; background-color:#4B0082; color:white; ">
+<input  class="btn btn-default btn-lg"  type="submit" value="Update" name="update" style="width:200px; background-color:#000080; color:white; margin-left:42% ">
+<input  class="btn btn-default btn-lg"  type="submit" value="Delete" name="delete" style="width:200px; background-color:#000080; color:white; ">
 
 
 </form>

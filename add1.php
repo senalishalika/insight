@@ -40,7 +40,7 @@ tr{
 
 }
 input[type=text],input[type=date]{
-    background-color:   rgb(250,230,246);
+    background-color:   rgb(240,248,255);
 }
 </style>
 </head>
@@ -158,7 +158,7 @@ input[type=text],input[type=date]{
             </div>
 
         </nav>
-             <div id="page-wrapper" style="background-color: #4B0082;">
+             <div id="page-wrapper" style="background-color:black;">
             <div id="page-inner" style="background-color: #4B0082;" >
                 <div class="contain-fluid" style="font-family:arial; border: 1px solid DarkGray; border-radius:5px; margin-left:5%; margin-top:10px; width:90%; align:center; padding:10px; background-color:white; height:60px;">
         <h1 style="margin-top:-5px" align="center">Enter Employee Details</h1>
@@ -176,7 +176,7 @@ input[type=text],input[type=date]{
 <tr><td>Joined Date</td><td><input class="form-control"  type="date"  name="date"></td></tr>
 <tr><td>Salary</td><td><input  class="form-control" type="text"  name="salary"></td></tr>
 
-<tr><td></td><td><input  class="btn btn-default btn-lg"  type="submit" value="Submit" name="submit" style="width:200px; background-color:#4B0082; color:white; float:right;"></td></tr>
+<tr><td></td><td><input  class="btn btn-default btn-lg"  type="submit" value="Submit" name="submit" style="width:200px; background-color:#000080; color:white; float:right;"></td></tr>
 </table>
 </form>
 </div>
