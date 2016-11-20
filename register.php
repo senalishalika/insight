@@ -61,7 +61,7 @@ if(isset($_POST['signup'])) {
 <body>
 
  <div class="login">
-  <h2>Welcome</h2>
+  <h2>WELCOME</h2>
 
      
         
@@ -87,7 +87,7 @@ if(isset($_POST['signup'])) {
     		
              <div class="utilities">
     <a href="#">Forgot Password?</a>
-    <a href="index.php">Log in here &rarr;</a>
+    <a href="index.php">Sign in here &rarr;</a>
   </div>
        
       

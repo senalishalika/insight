@@ -32,17 +32,7 @@ $DBcon->close();
     <link href="assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-tr{
-    height:50px;
 
-
-}
-input[type=text],input[type=date]{
-    background-color:   rgb(250,230,246);
-}
-</style>
 </head>
 <body>
     <div id="wrapper">
@@ -88,7 +78,7 @@ input[type=text],input[type=date]{
                         <a class="" href="blank.php"><i class="fa fa-dashboard "></i>About</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-desktop "></i>UI Elements <span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-desktop "></i>Cources <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
                                 <a href="panel-tabs.html"><i class="fa fa-toggle-on"></i>Tabs & Panels</a>
@@ -99,12 +89,7 @@ input[type=text],input[type=date]{
                              <li>
                                 <a href="progress.html"><i class="fa fa-circle-o "></i>Progressbars</a>
                             </li>
-                             <li>
-                                <a href="buttons.html"><i class="fa fa-code "></i>Buttons</a>
-                            </li>
-                             <li>
-                                <a href="icons.html"><i class="fa fa-bug "></i>Icons</a>
-                            </li>
+                            
                              <li>
                                 <a href="wizard.html"><i class="fa fa-bug "></i>Wizard</a>
                             </li>
@@ -122,17 +107,15 @@ input[type=text],input[type=date]{
                         <a href="#"><i class="fa fa-yelp "></i>Staff<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="add.php"><i class="fa fa-coffee"></i>Add Staff Members</a>
+                                <a href="add1.php"><i class="fa fa-coffee"></i>Add Staff Members</a>
                             </li>
-                            <li>
+                             <li>
                                 <a href="search.php"><i class="fa fa-flash "></i>Search Staff Members</a>
                             </li>
                              
-                           
-                        </ul>
-                    </li>
+                           </ul>
                     <li>
-                        <a href="table.html"><i class="fa fa-flash "></i>Data Tables </a>
+                        <a href="table.html"><i class="fa fa-flash "></i>Students </a>
                         
                     </li>
                      <li>
@@ -140,8 +123,11 @@ input[type=text],input[type=date]{
                          <ul class="nav nav-second-level">
                            
                              <li>
-                                <a href="form.html"><i class="fa fa-desktop "></i>Basic </a>
-                            </li>
+                   <a href="#"><i class="fa fa-sitemap "></i>Reports<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="staff_report.php"><i class="fa fa-bicycle "></i>Staff reports</a>
+                            </li>           
                              <li>
                                 <a href="form-advance.html"><i class="fa fa-code "></i>Advance</a>
                             </li>
@@ -155,33 +141,7 @@ input[type=text],input[type=date]{
                      <li>
                         <a href="error.html"><i class="fa fa-bug "></i>Error Page</a>
                     </li>
-                    <li>
-                        <a href="login.html"><i class="fa fa-sign-in "></i>Login Page</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap "></i>Reports<span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="staff_report.php"><i class="fa fa-bicycle "></i>Staff reports</a>
-                            </li>
-                             <li>
-                                <a href="#"><i class="fa fa-flask "></i>Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#"><i class="fa fa-plus "></i>Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-comments-o "></i>Third Level Link</a>
-                                    </li>
-
-                                </ul>
-
-                            </li>
-                        </ul>
-                    </li>
+                    
                    
                     <li>
                         <a href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>
@@ -189,23 +149,58 @@ input[type=text],input[type=date]{
                 </ul>
 
             </div>
- </nav>
-             <div id="page-wrapper" style="background-color: #4B0082;">
-            <div id="page-inner" style="background-color: #4B0082;" >
-               <div class="contain-fluid" style="font-family:arial; border: 1px solid DarkGray; border-radius:5px; margin-left:5%; margin-top:10px; width:90%; align:center; padding:10px; background-color:white; height:60px;">
-		<h1 style="margin-top:-5px" align="center">Search Employee Details</h1>
-	</div>
-<div class="contain-fluid" style="font-family:arial; border: 1px solid DarkGray; border-radius:5px; margin-left:5%; margin-top:80px; width:90%; align:center; padding:10px; background-color:white;">
-<form  action="up.php" method="POST" style="margin-left:10%">
-	<table width="80%" style="color:#4B0082">
-<tr><td style="width:20%">Enter Employee ID</td><td  width="50%" ><input class="form-control"   type="text" name="search"></td></tr>
 
-<tr><td></td><td><input  class="btn btn-default btn-lg"  type="submit" value="Submit" name="submit" style="width:200px; background-color:#4B0082; color:white; float:right;"></td></tr>
-</table>
-</form>
-</div>
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">Staff Report </h1>
 
-<?php
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-md-12">
+                       <div >
+     
+      <div class="row pad-top-botm ">
+         <div class="col-lg-6 col-md-6 col-sm-6 ">
+            <img src="assets/img/profile.jpg" style="padding-bottom:20px;" /> 
+         </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            
+               <strong>   Institue of Management & Technology</strong>
+              <br />
+                  <i>Address :</i> No: 18 A Palmyrah Avenue,
+              <br />
+                  Colombo. 03,
+              <br />
+                  Colombo, Sri Lanka.
+              
+         </div>
+     </div>
+     <div  class="row text-center contact-info">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+             <hr />
+             <span>
+                 <strong>Email : </strong>  insight@gmail.com
+             </span>
+             <span>
+                 <strong>Call : </strong>   077-2992225
+    
+                                                </span>
+              <span>
+                 <strong>Fax : </strong>  011-2965789
+             </span>
+             <hr />
+         </div>
+     </div>
+ <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+           <div class="table-responsive">
+             <?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -217,33 +212,47 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+$sql = "SELECT ID,NIC,Name,gender,telNo,address,joined_date FROM staff";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo
+                                "<table class=\"table table-striped table-bordered table-hover\">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>NIC</th>
+                                    <th>Name</th>
+                                    <th>Gender</th>
+                                     <th>Tel-No</th>
+                                     <th>Address</th>
+                                     <th>Joined Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>";
+                            while($row = $result->fetch_assoc()) {
+        echo "<tr><td>".$row["ID"]."</td><td>".$row["NIC"]." </td><td>".$row["Name"]." </td><td>".$row["gender"]." </td><td>".$row["telNo"]." </td><td>".$row["address"]." </td><td>".$row["joined_date"]." </td></tr>";
+    }
+    echo 
+
+                                
+                           " </tbody>
+                        </table>";
+} else {
+    echo "0 results";
+}
+$conn->close();
+
+
 ?>
+               </div>
+             <hr />
 
+
+
+
+ </div>
 </div>
-</div>
-
-	
-
-       
-        <!-- /. NAV SIDE  -->
-        <div id="footer-sec">
-        &copy; 2014 YourCompany | Design By : <a href="http://www.binarytheme.com/" target="_blank">BinaryTheme.com</a>
-    </div>
-    <!-- /. FOOTER  -->
-    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.js"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
-       <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
-    
-
-
-</body>
-</html>
 
 
 </body>

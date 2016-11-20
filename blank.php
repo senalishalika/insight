@@ -43,7 +43,7 @@ $DBcon->close();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Insight</a>
+                <a class="navbar-brand" href="">Insight</a>
             </div>
 
             <div class="header-right">
@@ -77,7 +77,7 @@ $DBcon->close();
                         <a class="" href="blank.php"><i class="fa fa-dashboard "></i>About</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-desktop "></i>UI Elements <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-desktop "></i>Cources <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
                                 <a href="panel-tabs.html"><i class="fa fa-toggle-on"></i>Tabs & Panels</a>
@@ -88,12 +88,7 @@ $DBcon->close();
                              <li>
                                 <a href="progress.html"><i class="fa fa-circle-o "></i>Progressbars</a>
                             </li>
-                             <li>
-                                <a href="buttons.html"><i class="fa fa-code "></i>Buttons</a>
-                            </li>
-                             <li>
-                                <a href="icons.html"><i class="fa fa-bug "></i>Icons</a>
-                            </li>
+                            
                              <li>
                                 <a href="wizard.html"><i class="fa fa-bug "></i>Wizard</a>
                             </li>
@@ -113,25 +108,13 @@ $DBcon->close();
                             <li>
                                 <a href="add1.php"><i class="fa fa-coffee"></i>Add Staff Members</a>
                             </li>
-                            <li>
-                                <a href="pricing.html"><i class="fa fa-flash "></i>Pricing</a>
-                            </li>
                              <li>
-                                <a href="component.html"><i class="fa fa-key "></i>Components</a>
+                                <a href="search.php"><i class="fa fa-flash "></i>Search Staff Members</a>
                             </li>
-                             <li>
-                                <a href="social.html"><i class="fa fa-send "></i>Social</a>
-                            </li>
-                            
-                             <li>
-                                <a href="message-task.html"><i class="fa fa-recycle "></i>Messages & Tasks</a>
-                            </li>
-                            
-                           
-                        </ul>
-                    </li>
+                             
+                           </ul>
                     <li>
-                        <a href="table.html"><i class="fa fa-flash "></i>Data Tables </a>
+                        <a href="table.html"><i class="fa fa-flash "></i>Students </a>
                         
                     </li>
                      <li>
@@ -139,8 +122,11 @@ $DBcon->close();
                          <ul class="nav nav-second-level">
                            
                              <li>
-                                <a href="form.html"><i class="fa fa-desktop "></i>Basic </a>
-                            </li>
+                   <a href="#"><i class="fa fa-sitemap "></i>Reports<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="staff_report.php"><i class="fa fa-bicycle "></i>Staff reports</a>
+                            </li>           
                              <li>
                                 <a href="form-advance.html"><i class="fa fa-code "></i>Advance</a>
                             </li>
@@ -154,33 +140,7 @@ $DBcon->close();
                      <li>
                         <a href="error.html"><i class="fa fa-bug "></i>Error Page</a>
                     </li>
-                    <li>
-                        <a href="login.html"><i class="fa fa-sign-in "></i>Login Page</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap "></i>Multilevel Link <span class="fa arrow"></span></a>
-                         <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#"><i class="fa fa-bicycle "></i>Second Level Link</a>
-                            </li>
-                             <li>
-                                <a href="#"><i class="fa fa-flask "></i>Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#"><i class="fa fa-plus "></i>Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-comments-o "></i>Third Level Link</a>
-                                    </li>
-
-                                </ul>
-
-                            </li>
-                        </ul>
-                    </li>
+                    
                    
                     <li>
                         <a href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>

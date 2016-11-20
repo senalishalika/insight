@@ -159,10 +159,10 @@ input[type=text],input[type=date]{
                         <a href="login.html"><i class="fa fa-sign-in "></i>Login Page</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap "></i>Multilevel Link <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap "></i>Reports<span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="fa fa-bicycle "></i>Second Level Link</a>
+                                <a href="staff_report.php"><i class="fa fa-bicycle "></i>Staff reports</a>
                             </li>
                              <li>
                                 <a href="#"><i class="fa fa-flask "></i>Second Level Link</a>
