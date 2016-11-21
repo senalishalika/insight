@@ -84,7 +84,7 @@ input[type=text],input[type=date]{
                     </li>
 
 
-                  <li>
+                 <li>
                         <a href="#"><i class="fa fa-desktop "></i>Cources <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
@@ -150,7 +150,21 @@ input[type=text],input[type=date]{
         <h1 style="margin-top:-5px" align="center">Enter Employee Details</h1>
     </div>
 <div class="contain-fluid" style="font-family:arial; border: 1px solid DarkGray; border-radius:5px; margin-left:5%; margin-top:10px; width:90%; align:center; padding:10px; background-color:white;">
-<form  action="add1.php" method="POST" style="margin-left:10%">
+
+	<form  action="up_course.php" method="POST" style="margin-left:10%">
+                <table width="80%" style="color:#4B0082">
+                    <tr>
+                        <td style="width:20%">Enter Course ID</td>
+                        <td  width="50%" ><input class="form-control" type="text" name="search" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><input  class="btn btn-default btn-lg"  type="submit" value="Search" name="searchBtn" style="width:200px; background-color:#4B0082; color:white; float:right;"></td>
+                        <td> </td>
+                    </tr>
+                </table>
+            </form>
+<!--form  action="add1.php" method="POST" style="margin-left:10%">
     <table width="80%" style="color:#4B0082">
 <tr><td style="width:20%">Employee ID</td><td  width="50%" ><input class="form-control"   type="text" name="id"></td></tr>
 <tr><td>NIC</td><td><input class="form-control" type="text"  name="nic"></td></tr>
@@ -164,11 +178,11 @@ input[type=text],input[type=date]{
 
 <tr><td></td><td><input  class="btn btn-default btn-lg"  type="submit" value="Submit" name="submit" style="width:200px; background-color:#000080; color:white; float:right;"></td></tr>
 </table>
-</form>
+</form-->
 </div>
 
 
-<?php
+<!--?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -202,7 +216,7 @@ if(mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 }
-?>
+?-->
 
 
 

@@ -84,16 +84,30 @@ input[type=text],input[type=date]{
                     </li>
 
 
-                  <li>
+                   <li>
                         <a href="#"><i class="fa fa-desktop "></i>Cources <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a href="Add_course.php"><i class="fa fa-toggle-on"></i>Enter new Course</a>
+                                <a href="Add_course.php"><i class="fa fa-toggle-on"></i>Enter New Course</a>
                             </li>
                             <li>
                                 <a href="search_course.php"><i class="fa fa-bell "></i>Search Course</a>
                             </li>
-                             
+                             <li>
+                                <a href="progress.html"><i class="fa fa-circle-o "></i>Progressbars</a>
+                            </li>
+                            
+                             <li>
+                                <a href="wizard.html"><i class="fa fa-bug "></i>Wizard</a>
+                            </li>
+                             <li>
+                                <a href="typography.html"><i class="fa fa-edit "></i>Typography</a>
+                            </li>
+                             <li>
+                                <a href="grid.html"><i class="fa fa-eyedropper "></i>Grid</a>
+                            </li>
+                            
+                           
                         </ul>
                     </li>
                      <li>
@@ -150,7 +164,64 @@ input[type=text],input[type=date]{
         <h1 style="margin-top:-5px" align="center">Enter Employee Details</h1>
     </div>
 <div class="contain-fluid" style="font-family:arial; border: 1px solid DarkGray; border-radius:5px; margin-left:5%; margin-top:10px; width:90%; align:center; padding:10px; background-color:white;">
-<form  action="add1.php" method="POST" style="margin-left:10%">
+
+	<form  action="up_delete_course.php" method="POST" style="margin-left:10%">
+            <div style="color:#4B0082; height:500px;" >
+                <?php
+
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "insight";
+                    $row=null;
+
+                    // Create connection
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    // Check connection
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+
+
+                    if ($_SERVER["REQUEST_METHOD"]=="POST") {
+                        $course_id=$_POST['search'];
+                        
+                    
+                        if ($course_id=='') {
+                            echo  "<script> alert('please enter Course ID')</script>";
+                            exit();
+                        }
+                        
+                        $sqlCheckCID = "SELECT * FROM course WHERE course_id='$course_id' ";
+                        $res1=$conn->query($sqlCheckCID);
+                        
+                        if ($res1->num_rows>0) {
+                            $row=$res1->fetch_assoc();
+                        
+                        }
+                        $conn->close();
+                    }
+                
+                    if($row!=null) {?>
+
+                        <table width="80%" >
+                            <tr><td>Course ID</td><td><input class="form-control" type="text" name="course_id" required value=<?php if($row!=null){echo $row['course_id'];} ?>></td></tr>
+                            <tr><td>Course Name</td><td><input class="form-control" type="text" name="course_name"  required value=<?php if($row!=null){echo $row['course_name'];} ?>></td></tr>
+                            <tr><td>Start Date</td><td><input class="form-control" type="text"  name="start_date" required value=<?php  if($row!=null){echo $row['start_date'];} ?>></td></tr>
+                            <tr><td>Duration</td><td><input class="form-control" type="text"  name="duration" required value=<?php  if($row!=null){echo $row['duration'];} ?>></td></tr>
+                            <tr><td>In charge</td><td><input class="form-control" type="text"  name="in_charge" required value=<?php  if($row!=null){echo $row['in_charge'];} ?>></td></tr>
+
+                        </table>
+                    <?php }else { 
+                       // header('location:search.php');
+                    }?>
+                    <input  class="btn btn-default btn-lg"  type="submit" value="Update" name="update" style="width:200px; background-color:#4B0082; color:white; margin-left:42% ">
+                    <input  class="btn btn-default btn-lg"  type="submit" value="Delete" name="delete" style="width:200px; background-color:#4B0082; color:white; ">
+
+
+        </form>
+    </div>
+<!--form  action="add1.php" method="POST" style="margin-left:10%">
     <table width="80%" style="color:#4B0082">
 <tr><td style="width:20%">Employee ID</td><td  width="50%" ><input class="form-control"   type="text" name="id"></td></tr>
 <tr><td>NIC</td><td><input class="form-control" type="text"  name="nic"></td></tr>
@@ -164,49 +235,8 @@ input[type=text],input[type=date]{
 
 <tr><td></td><td><input  class="btn btn-default btn-lg"  type="submit" value="Submit" name="submit" style="width:200px; background-color:#000080; color:white; float:right;"></td></tr>
 </table>
-</form>
+</form-->
 </div>
-
-
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "insight";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-if(isset($_POST["submit"])){
-    $id=$_POST['id'];
-    $nic=$_POST['nic'];
-    $name=$_POST['name'];
-    $gender=$_POST['gender'];
-    $bday=$_POST['bday'];
-    $tel=$_POST['tel'];
-    $address=$_POST['address'];
-    $date=$_POST['date'];
-    $salary=$_POST['salary'];
-    
-
-$sql="INSERT INTO staff (ID,NIC,name,gender,birthDay,telNo,address,joined_date,salary) VALUES ('$id','$nic','$name','$gender','$bday','$tel','$address','$date','$salary')";
-
-if(mysqli_query($conn, $sql)) {
-    echo "";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-
-mysqli_close($conn);
-}
-?>
-
-
-
-
 
 
 

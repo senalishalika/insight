@@ -32,17 +32,7 @@ $DBcon->close();
     <link href="assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-tr{
-    height:50px;
 
-
-}
-input[type=text],input[type=date]{
-    background-color:   rgb(240,248,255);
-}
-</style>
 </head>
 <body>
     <div id="wrapper">
@@ -84,6 +74,9 @@ input[type=text],input[type=date]{
                     </li>
 
 
+                   <li>
+                        <a class="" href="blank.php"><i class="fa fa-dashboard "></i>About</a>
+                    </li>
                   <li>
                         <a href="#"><i class="fa fa-desktop "></i>Cources <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
@@ -144,31 +137,56 @@ input[type=text],input[type=date]{
             </div>
 
         </nav>
-             <div id="page-wrapper" style="background-color:black;">
-            <div id="page-inner" style="background-color: #4B0082;" >
-                <div class="contain-fluid" style="font-family:arial; border: 1px solid DarkGray; border-radius:5px; margin-left:5%; margin-top:10px; width:90%; align:center; padding:10px; background-color:white; height:60px;">
-        <h1 style="margin-top:-5px" align="center">Enter Employee Details</h1>
-    </div>
-<div class="contain-fluid" style="font-family:arial; border: 1px solid DarkGray; border-radius:5px; margin-left:5%; margin-top:10px; width:90%; align:center; padding:10px; background-color:white;">
-<form  action="add1.php" method="POST" style="margin-left:10%">
-    <table width="80%" style="color:#4B0082">
-<tr><td style="width:20%">Employee ID</td><td  width="50%" ><input class="form-control"   type="text" name="id"></td></tr>
-<tr><td>NIC</td><td><input class="form-control" type="text"  name="nic"></td></tr>
-<tr><td>Name</td><td><input class="form-control" type="text"  name="name"></td></tr>
-<tr><td>Gender</td><td><input class="form-control" type="text"  name="gender"></td></tr>
-<tr><td>Birth Day</td><td><input class="form-control" type="date"  name="bday"></td></tr>
-<tr><td>Tel No</td><td><input class="form-control" type="text"  name="tel"></td></tr>
-<tr><td>Address</td><td><input class="form-control"  type="text"   name="address"></td></tr>
-<tr><td>Joined Date</td><td><input class="form-control"  type="date"  name="date"></td></tr>
-<tr><td>Salary</td><td><input  class="form-control" type="text"  name="salary"></td></tr>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">Staff Report </h1>
 
-<tr><td></td><td><input  class="btn btn-default btn-lg"  type="submit" value="Submit" name="submit" style="width:200px; background-color:#000080; color:white; float:right;"></td></tr>
-</table>
-</form>
-</div>
-
-
-<?php
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-md-12">
+                       <div >
+     
+      <div class="row pad-top-botm ">
+         <div class="col-lg-6 col-md-6 col-sm-6 ">
+            <img src="assets/img/profile.jpg" style="padding-bottom:20px;" /> 
+         </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            
+               <strong>   Institue of Management & Technology</strong>
+              <br />
+                  <i>Address :</i> No: 18 A Palmyrah Avenue,
+              <br />
+                  Colombo. 03,
+              <br />
+                  Colombo, Sri Lanka.
+              
+         </div>
+     </div>
+     <div  class="row text-center contact-info">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+             <hr />
+             <span>
+                 <strong>Email : </strong>  insight@gmail.com
+             </span>
+             <span>
+                 <strong>Call : </strong>   077-2992225
+    
+                                                </span>
+              <span>
+                 <strong>Fax : </strong>  011-2965789
+             </span>
+             <hr />
+         </div>
+     </div>
+ <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+           <div class="table-responsive">
+             <?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -180,56 +198,46 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-if(isset($_POST["submit"])){
-    $id=$_POST['id'];
-    $nic=$_POST['nic'];
-    $name=$_POST['name'];
-    $gender=$_POST['gender'];
-    $bday=$_POST['bday'];
-    $tel=$_POST['tel'];
-    $address=$_POST['address'];
-    $date=$_POST['date'];
-    $salary=$_POST['salary'];
-    
+$sql = "SELECT * FROM course";
+$result = $conn->query($sql);
 
-$sql="INSERT INTO staff (ID,NIC,name,gender,birthDay,telNo,address,joined_date,salary) VALUES ('$id','$nic','$name','$gender','$bday','$tel','$address','$date','$salary')";
+if ($result->num_rows > 0) {
+    echo
+                                "<table class=\"table table-striped table-bordered table-hover\">
+                            <thead>
+                                <tr>
+                                    <th>Course ID</th>
+                                    <th>Course Name</th>
+                                    <th>Start Date</th>
+                                    <th>Duration</th>
+                                     <th>In Charge</th>
+                                     
+                                </tr>
+                            </thead>
+                            <tbody>";
+                            while($row = $result->fetch_assoc()) {
+        echo "<tr><td>".$row["course_id"]."</td><td>".$row["course_name"]." </td><td>".$row["start_date"]." </td><td>".$row["duration"]." </td><td>".$row["in_charge"]." </td><td>";
+    }
+    echo 
 
-if(mysqli_query($conn, $sql)) {
-    echo "";
+                                
+                           " </tbody>
+                        </table>";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "0 results";
 }
+$conn->close();
 
-mysqli_close($conn);
-}
+
 ?>
+               </div>
+             <hr />
 
 
 
 
-
-
-
-
-            </div>
-        </div>
-
-       
-        <!-- /. NAV SIDE  -->
-        <div id="footer-sec">
-        &copy; 2014 YourCompany | Design By : <a href="http://www.binarytheme.com/" target="_blank">BinaryTheme.com</a>
-    </div>
-    <!-- /. FOOTER  -->
-    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="assets/js/bootstrap.js"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
-       <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
-    
+ </div>
+</div>
 
 
 </body>
